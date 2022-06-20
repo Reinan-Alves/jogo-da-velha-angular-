@@ -111,9 +111,10 @@ export class JogoDaVelhaService {
     this._jogador = this._jogador === this.X ? this.O : this.X;
 
     if (!this.vitoria && this.numMovimentos < 9) {
-      setTimeout(() => {
-        this.cpuJogar();
-      }, 700);
+      //aguarda entre 0.5s e 1s para cpu efetuar a jogada
+      //setTimeout(() => {
+      this.cpuJogar();
+      //}, Math.random() * (1000 - 500) + 500);
     }
 
     // houve vitória

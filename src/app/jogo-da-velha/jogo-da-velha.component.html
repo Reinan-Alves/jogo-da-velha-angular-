@@ -4,7 +4,7 @@
   <!-- tela inicial -->
   <div class="principal" *ngIf="showInicio">
     <a href="#" class="botao" (click)="iniciarJogo()"> Iniciar </a>
-    <h5 id="desenvolvedor">Development: <span>Reinan Santos</span></h5>
+    <h5 id="desenvolvedor">Dev: <span>Reinan Santos</span></h5>
   </div>
   <!-- fim tela inicial -->
 
@@ -96,13 +96,31 @@
   <!-- tela final -->
   <div *ngIf="showFinal">
     <span>
-      <p *ngIf="jogador == 2">Você venceu!!!</p>
-      <p *ngIf="jogador == 1">Você perdeu...</p>
-      <p *ngIf="jogador == 0">O jogo terminou empatado...</p>
+      <p *ngIf="jogador == 2">
+        Você venceu!!!
+        <figure>
+          <img src="/assets/imagens/venceu.png" alt="Minha Figura" />
+          <figcaption></figcaption>
+        </figure>
+      </p>
+      <p *ngIf="jogador == 1">
+        Você perdeu...
+        <figure>
+          <img src="/assets/imagens/perdeu.jpg" alt="Minha Figura" />
+          <figcaption></figcaption>
+        </figure>
+      </p>
+      <p *ngIf="jogador == 0">
+        O jogo terminou empatado...
+        <figure>
+          <img src="/assets/imagens/empatou.jpg" alt="Minha Figura" />
+          <figcaption></figcaption>
+        </figure>
+      </p>
       <br />
       <a href="#" class="botao" (click)="novoJogo()"> Jogar novamente </a>
     </span>
-    <h5 id="desenvolvedor">Desenvolvido Por <span>Reinan Santos</span></h5>
+    <h5 id="desenvolvedor">Dev:<span>Reinan Santos</span></h5>
   </div>
   <!-- fim tela final -->
 </div>
