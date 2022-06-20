@@ -20,6 +20,20 @@ a.botao {
   padding: 15px;
 }
 
+@keyframes neon {
+  from {
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to {
+    filter: drop-shadow(0 0 30px var(--cor-neon));
+  }
+}
+a {
+  animation: neon 3s alternate infinite ease-in-out;
+}
+.botao {
+  --cor-neon: green;
+}
 a:link,
 a:visited {
   background-color: white;
